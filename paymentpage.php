@@ -9,7 +9,7 @@ require ("functions.php");//file which has required functions
 
 <?php
 
-$key = "40w1V3..................";//replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
+$key = getenv('SECURE-RESELLER-PAYMENT-KEY');//replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
 
 //This filter removes data that is potentially harmful for your application. It is used to strip tags and remove or encode unwanted characters.
 $_GET = filter_var_array($_GET, FILTER_SANITIZE_STRING);
@@ -95,15 +95,15 @@ if (verifyChecksum($paymentTypeId, $transId, $userId, $userType, $transactionTyp
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
 	addEventListener("load", function(e) {
-		var PBFKey = "FLWPUBK-.............."; // replace with your rave public key, Get your public key from your rave account's dashboard
+		var PBFKey = "<?php $envPBFKey = getenv('RAVE-PUBLIC-KEY'); echo $envPBFKey; ?>"; // replace with your rave public key, Get your public key from your rave account's dashboard
 		getpaidSetup({
 			PBFPubKey: PBFKey,
 			amount: <?php $sellingCurrencyAmount = $_GET['sellingcurrencyamount']; echo $sellingCurrencyAmount;?>,
-			country: "NG", // replace with your country
-			currency: "NGN", // replace with your currency
-			custom_description: "SECURE PAYMENT", // replace with your custom description
-			custom_logo: "http://example.com/image.jpg", // replace with link to your custom logo
-			custom_title: "My Company Ltd", // replace with link to your custom tittle
+			country: "<?php $envCountry = getenv('COUNTRY'); echo $envCountry;?>", // replace with your country
+			currency: "<?php $envCurrency = getenv('CURRENCY'); echo $envCurrency;?>", // replace with your currency
+			custom_logo: "<?php $envCustomLogo = getenv('CUSTOM-LOGO-URL'); echo $envCustomLogo;?>", // replace with link to your custom logo
+			custom_title: "<?php $envCustomTitle = getenv('CUSTOM-MODAL-TITLE'); echo $envCustomTitle;?>", // replace with link to your custom tittle
+			custom_description: "<?php $envCustomDescription = getenv('CUSTOM-MODAL-DESCRIPTION'); echo $envCustomDescription;?>", // replace with your custom description
 			customer_email: "<?php $emailAddr = $_GET['emailAddr']; echo $emailAddr;?>",
 			customer_firstname: "<?php $name = $_GET['name']; echo $name;?>",
 			customer_phone: "<?php $telNo = $_GET['telNo']; echo $telNo;?>",

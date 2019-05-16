@@ -12,7 +12,7 @@ require ("functions.php");
 
 <?php
 
-$key = "40w1V3..................";//replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
+$key = getenv('SECURE-RESELLER-PAYMENT-KEY');//replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
 
 $redirectUrl              = $_SESSION['redirecturl'];// redirectUrl received from foundation
 $transId                  = $_SESSION['transid'];//Pass the same transid which was passsed to your Gateway URL at the beginning of the transaction.
