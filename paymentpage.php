@@ -80,7 +80,7 @@ if (verifyChecksum($paymentTypeId, $transId, $userId, $userType, $transactionTyp
 	$_SESSION['txref'] 	= $transId;
 
 	//Insert the values into the database.
-
+/** 
 	if ($conn = mysqli_connect("db", "user", "password", "table")) { // replace the DB parameters with yours
 		if ($query = mysqli_query($conn, "INSERT INTO records_r_ng (paymenttypeid, transid, userid, usertype, transactiontype, invoiceids, debitnoteids, description, sellingcurrencyamount, accountingcurrencyamount, redirecturl, checksum, name, company, emailAddr, address1, address2, address3, city, state, country, zip, telNoCc, telNo, faxNoCc, faxNo, resellerEmail, resellerURL, resellerCompanyName) VALUES ('$paymentTypeId', '$transId', '$userId', '$userType', '$transactionType', '$invoiceIds', '$debitNoteIds', '$description', '$sellingCurrencyAmount', '$accountingCurrencyAmount', '$redirectUrl', '$checksum', '$name', '$company', '$emailAddr','$address1', '$address2', '$address3', '$city', '$state', '$country', '$zip', '$telNoCc', '$telNo', '$faxNoCc', '$faxNo', '$resellerEmail', '$resellerURL', '$resellerCompanyName')")) {
 			//Do nothing it worked.
@@ -89,7 +89,7 @@ if (verifyChecksum($paymentTypeId, $transId, $userId, $userType, $transactionTyp
 		}
 	} else {
 		die("Could not connect to mysql");
-	} // replace the DB parameters with yours
+	} // replace the DB parameters with yours*/
 ?>
 <script type="text/javascript" src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
 <script>
