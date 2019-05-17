@@ -1,0 +1,8 @@
+{
+  "name": "Receive Rave payments for FirebirdCloud reseller business",
+  "description": "Receive Flutterwave Rave payments for your FirebirdCloud Domain and Hosting reseller business",
+  "repository": "https://github.com/alexasomba/firebirdcloud-rave-payment-gateway",
+  "logo": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png",
+  "keywords": ["firebirdcloud", "rave", "nigeria", "payment-gateway", "flutterwave", "heroku"],
+  "image": "heroku/php"
+}
