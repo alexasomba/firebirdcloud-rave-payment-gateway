@@ -1,5 +1,5 @@
 {
-  "name": "Receive Rave payments for FirebirdCloud reseller business",
+  "name": "Rave payment gateway integration for FirebirdCloud reseller",
   "description": "Receive Flutterwave Rave payments for your FirebirdCloud Domain and Hosting reseller business",
   "repository": "https://github.com/alexasomba/firebirdcloud-rave-payment-gateway",
   "logo": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png",
