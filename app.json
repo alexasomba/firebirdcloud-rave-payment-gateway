@@ -17,13 +17,33 @@
     "website": "https://reseller.firebirdcloud.com/",
     "image": "heroku/php",
     "env": {
-        "SECRET_TOKEN": {
-          "description": "A secret key for verifying the integrity of signed cookies.",
-          "generator": "secret"
+        "COUNTRY": {
+          "description": "route country. Defaults to NG",
+          "value": "NG"
         },
-        "WEB_CONCURRENCY": {
+        "CURRENCY": {
+            "description": "currency to charge in. Defaults to NGN",
+            "value": "NGN"
+          },
+        "CUSTOM-LOGO-URL": {
+            "description": "Link to the Logo image.",
+            "value": ""
+          },
+        "CUSTOM-MODAL-DESCRIPTION": {
+            "description": "Text to be displayed as a short modal description. ex. SECURE PAYMENT",
+            "value": ""
+          },
+        "CUSTOM-MODAL-TITLE": {
+            "description": "Text to be displayed as the title of the payment modal. ex. Business Name",
+            "value": ""
+          },
+        "RAVE-PUBLIC-KEY": {
+            "description": "Your Rave merchant public key, see how to get your <a href="https://developer.flutterwave.com/docs/api-keys" target="_blank">API Keys</a>",
+            "value": "xxxxxxxxxxxxxxxxxxxxxxx"
+          },
+        "SECURE-RESELLER-PAYMENT-KEY": {
           "description": "The number of processes to run.",
-          "value": "5"
+          "value": "xxxxxxxxxxxxxxxxxxxxxxx"
         }
     }
 }
