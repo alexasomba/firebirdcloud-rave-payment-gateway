@@ -38,7 +38,7 @@
             "value": ""
           },
         "RAVE-PUBLIC-KEY": {
-            "description": "Your Rave merchant public key, see how to get your <a href="https://developer.flutterwave.com/docs/api-keys" target="_blank">API Keys</a>",
+            "description": "Your Rave merchant public key, see how to get your <a href=\"https:\/\/developer.flutterwave.com\/docs\/api-keys\" target=\"_blank\">API Keys<\/a>",
             "value": "xxxxxxxxxxxxxxxxxxxxxxx"
           },
         "SECURE-RESELLER-PAYMENT-KEY": {
