@@ -45,5 +45,9 @@
           "description": "Get your secure key from your Reseller Control panel. You need to replace this value in both the files with the KEY we generated for you at the time of adding the Gateway. You can check it from the Settings -> Finance and Billing -> Payment Gateway -> List / Add section by clicking the Payment Gateway that you added. Login here: https:\/\/manage.firebirdcloud.com\/reseller",
           "value": "xxxxxxxxxxxxxxxxxxxxxxx"
         }
-    }
+    },
+    "addons": [
+      "papertrail",
+      "memcachier"
+    ]
 }
