@@ -38,11 +38,11 @@
             "value": ""
           },
         "RAVE-PUBLIC-KEY": {
-            "description": "Your Rave merchant public key, see how to get your <a href=\"https:\/\/developer.flutterwave.com\/docs\/api-keys\" target=\"_blank\">API Keys<\/a>",
+            "description": "Your Rave merchant public key, see how to get Your Rave merchant public key, see how to get your API key here: https:\/\/developer.flutterwave.com\/docs\/api-keys",
             "value": "xxxxxxxxxxxxxxxxxxxxxxx"
           },
         "SECURE-RESELLER-PAYMENT-KEY": {
-          "description": "The number of processes to run.",
+          "description": "Get your secure key from your Reseller Control panel. You need to replace this value in both the files with the KEY we generated for you at the time of adding the Gateway. You can check it from the Settings -> Finance and Billing -> Payment Gateway -> List / Add section by clicking the Payment Gateway that you added. Login here: https:\/\/manage.firebirdcloud.com\/reseller",
           "value": "xxxxxxxxxxxxxxxxxxxxxxx"
         }
     }
