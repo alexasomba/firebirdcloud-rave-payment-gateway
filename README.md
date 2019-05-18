@@ -63,12 +63,12 @@ If at anytime you feel that you may have compromised the security of this Key, y
 - Edit the Rave specific parameters on paymentpage.php and postpayment.php
 
 ## STEP 5: Set the Gateway URL
-You will now need to set the Gateway URL which we skipped earlier while adding the Gateway. The Gateway URL is the full http:// URL that will be used to access the paymentpage.php on your server. So a typical Gateway URL would look like "https://yourappname.herokuapp.com/paymentpage.php".
+You will now need to set the Gateway URL which we skipped earlier while adding the Gateway. The Gateway URL is the full http:// URL that will be used to access the paymentpage.php on your server. So a typical Gateway URL would look like "https://website.com/paymentpage.php".
 
 Visit the Settings -> Finance and Billing -> Payment Gateway -> List / Add section within your Reseller Control Panel and click the Manage button next to the Payment Gateway you added. Click the Modify button and enter the Gateway URL as described above. Make sure the URL is entered complete with the "http://" or "https://" all the way up to the name of the page. DO NOT pass any Parameters to the URL.
 
-CORRECT GATEWAY URL: https://yourappname.herokuapp.com/paymentpage.php
-WRONG GATEWAY URLS: www.yourserver.com/paymentpage.php https://www.yourserver.com/paymentpage.php?someparam=something
+CORRECT GATEWAY URL: https://website.com/paymentpage.php
+WRONG GATEWAY URLS: www.yourserver.com/paymentpage.php https://www.website.com/paymentpage.php?someparam=something
 
 ## STEP 6: Testing the Integration so far
 You are now ready to test your integration and verify that it works. Follow the steps below to Test your Integration:
