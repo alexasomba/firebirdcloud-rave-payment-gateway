@@ -9,12 +9,12 @@ Get your domain and web hosting reseller business started instantly at no cost a
 
 ## Introduction
 
-The system has the built-in ability to allow you to integrate Paystack to allow your Customers / Sub-Resellers to pay you. What we have done is, built a module that can pass parameters to an intermediate bridge on your server, that you can then integrate with any Payment Gateway of your choice.
+The system has the built-in ability to allow you to integrate Rave to allow your Customers / Sub-Resellers to pay you. What we have done is, built a module that can pass parameters to an intermediate bridge on your server, that you can then integrate with any Payment Gateway of your choice.
 
 The logic of the flow in this integration is quite simple:
 1. Any Customer / Sub-Reseller of yours needs to pay you money and selects a Payment Gateway to do so.
 2. We simply create a collection of messages that you will need to charge this Customer / Sub-Reseller. This set of messages would contain things like Order Information, Amount etc. We then redirect the Customer to your Server with this set of messages.
-3. You then charge the Customer / Sub-Reseller using these messages, and your Payment Gateway(in this case Paystack).
+3. You then charge the Customer / Sub-Reseller using these messages, and your Payment Gateway(in this case Rave).
 4. You then redirect the Customer back to our Server with a status of the transaction as to whether you have successfully charged the Customer / Sub-Reseller.
 5. Once this is done we Add these funds to the Customer / Sub-Reseller account, and/or process any associated Orders.
 
@@ -30,7 +30,7 @@ Unarchive the content of the repo into your server
 4. Select the Checksum Algorithm as MD5 and save your changes by clicking Submit.
 
 ## STEP 3: Adding the Rave Custom Payment Gateway
-Next, you need to Add the Paystack Payment Gateway to our system.
+Next, you need to Add the Rave Payment Gateway to our system.
 You can Add or Modify your current/preferred Payment Gateway within your Reseller account by following the steps given below:
 1. Login to your Reseller Control Panel.
 2. In the Menu, point to Settings -> Finance and Billing -> Payment Gateway and click List / Add.
