@@ -23,18 +23,18 @@ The logic of the flow in this integration is quite simple:
 
 ## Setup
 
-## STEP 1: Integrate this kit with your website (eg. using cPanel)
+### STEP 1: Integrate this kit with your website (eg. using cPanel)
 
 Unarchive the content of the repo into your server
 
-## STEP 2: Select the correct Checksum Algorithm within your Reseller Control Panel
+### STEP 2: Select the correct Checksum Algorithm within your Reseller Control Panel
 
 1. Login to your Reseller Control Panel.
 2. In the Menu, point to Settings -> Finance and Billing -> Payment Gateway and click List / Add.
 3. Click the Manage button next to the Custom Payment Gateway that you are upgrading.
 4. Select the Checksum Algorithm as MD5 and save your changes by clicking Submit.
 
-## STEP 3: Adding the Rave Custom Payment Gateway
+### STEP 3: Adding the Rave Custom Payment Gateway
 
 Next, you need to Add the Rave Payment Gateway to our system.
 You can Add or Modify your current/preferred Payment Gateway within your Reseller account by following the steps given below:
@@ -52,7 +52,7 @@ You can Add or Modify your current/preferred Payment Gateway within your Reselle
 - Display Position: If you plan on adding multiple Payment Gateways you can select the position in which you wish to display this Gateway on your Payment Page.
 - Checksum Algorithm: Select MD5 if you have downloaded the latest Integration Kit (version 2 or above) or have followed the upgrade instructions listed in Step 1. Select Addler 32 only if you are still using an older kit and haven't yet upgraded.
 
-## STEP 4: Preparation on your Server
+### STEP 4: Preparation on your Server
 
 On your own server, upload all the files from this integration kit. Some of the files included are:
 
@@ -71,7 +71,7 @@ If at anytime you feel that you may have compromised the security of this Key, y
 
 - Edit the Rave specific parameters on paymentpage.php and postpayment.php
 
-## STEP 5: Set the Gateway URL
+### STEP 5: Set the Gateway URL
 
 You will now need to set the Gateway URL which we skipped earlier while adding the Gateway. The Gateway URL is the full `http://` URL that will be used to access the paymentpage.php on your server. So a typical Gateway URL would look like `https://website.com/paymentpage.php`.
 
@@ -80,7 +80,7 @@ Visit the Settings -> Finance and Billing -> Payment Gateway -> List / Add secti
 CORRECT GATEWAY URL: `https://website.com/paymentpage.php`
 WRONG GATEWAY URLS: `www.yourserver.com/paymentpage.php` `https://www.website.com/paymentpage.php?someparam=something`
 
-## STEP 6: Testing the Integration so far
+### STEP 6: Testing the Integration so far
 
 You are now ready to test your integration and verify that it works. Follow the steps below to Test your Integration:
 
