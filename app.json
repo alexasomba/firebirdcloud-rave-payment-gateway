@@ -16,6 +16,7 @@
     ],
     "website": "https://reseller.firebirdcloud.com/",
     "image": "heroku/php",
+    "stack": "heroku-16",
     "env": {
         "COUNTRY": {
           "description": "route country. Defaults to NG",
