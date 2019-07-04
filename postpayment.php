@@ -1,9 +1,9 @@
 <?php
 session_start();
-session_save_path("./");//path on your server where you are storing session
+//session_save_path("./");//path on your server where you are storing session
 
 //file which has required functions
-require ("functions.php");
+require "functions.php";
 ?>
 <html>
 <head><title>Post Payment</title></head>
@@ -23,7 +23,7 @@ $status = $_REQUEST["status"];// Transaction status received from your Payment G
 //This can be either 'Y' or 'N'. A 'Y' signifies that the Transaction went through SUCCESSFULLY and that the amount has been collected.
 //An 'N' on the other hand, signifies that the Transaction FAILED.
 
-/**HERE YOU HAVE TO VERIFY THAT THE STATUS PASSED FROM YOUR PAYMENT GATEWAY IS VALID.
+/** HERE YOU HAVE TO VERIFY THAT THE STATUS PASSED FROM YOUR PAYMENT GATEWAY IS VALID.
  * And it has not been tampered with. The data has not been changed since it can * easily be done with HTTP request.
  *
  **/
