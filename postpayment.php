@@ -1,42 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
-use MemCachier\MemcacheSASL;
-
-// Make MemCachier connection
-// ==========================
-
-// parse config
-$servers = explode(",", getenv("MEMCACHIER_SERVERS"));
-for ($i = 0; $i < count($servers); $i++) {
-  $servers[$i] = explode(":", $servers[$i]);
-}
-
-// Using Memcached client (recommended)
-// ------------------------------------
-$m = new Memcached("memcached_pool");
-$m->setOption(Memcached::OPT_BINARY_PROTOCOL, TRUE);
-// Enable no-block for some performance gains but less certainty that data has
-// been stored.
-$m->setOption(Memcached::OPT_NO_BLOCK, TRUE);
-// Failover automatically when host fails.
-$m->setOption(Memcached::OPT_AUTO_EJECT_HOSTS, TRUE);
-// Adjust timeouts.
-$m->setOption(Memcached::OPT_CONNECT_TIMEOUT, 2000);
-$m->setOption(Memcached::OPT_POLL_TIMEOUT, 2000);
-$m->setOption(Memcached::OPT_RETRY_TIMEOUT, 2);
-
-$m->setSaslAuthData(getenv("MEMCACHIER_USERNAME"), getenv("MEMCACHIER_PASSWORD"));
-if (!$m->getServerList()) {
-  // We use a consistent connection to memcached, so only add in the servers
-  // first time through otherwise we end up duplicating our connections to the
-  // server.
-  $m->addServers($servers);
-}
-
 // Enable MemCachier session support
 session_start();
 $_SESSION['test'] = 42;
+//session_save_path("PERSISTENT=myapp_session ${MEMCACHIER_SERVERS}");//path on your server where you are storing session
 
 //session_save_path("./");//path on your server where you are storing session
 
