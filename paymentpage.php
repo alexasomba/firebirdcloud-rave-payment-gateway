@@ -74,29 +74,29 @@ require "functions.php";//file which has required functions
 
 <?php
 
-$key = getenv('SECURE-RESELLER-PAYMENT-KEY');//replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
+$key = getenv('SECURE-RESELLER-PAYMENT-KEY'); //replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
 
 //This filter removes data that is potentially harmful for your application. It is used to strip tags and remove or encode unwanted characters.
 $_GET = filter_var_array($_GET, FILTER_SANITIZE_STRING);
 
 //Below are the  parameters which will be passed from foundation as http GET request
-$paymentTypeId   = $_GET["paymenttypeid"];//payment type id
-$transId         = $_GET["transid"];//This refers to a unique transaction ID which we generate for each transaction
-$userId          = $_GET["userid"];//userid of the user who is trying to make the payment
-$userType        = $_GET["usertype"];//This refers to the type of user perofrming this transaction. The possible values are "Customer" or "Reseller"
-$transactionType = $_GET["transactiontype"];//Type of transaction (ResellerAddFund/CustomerAddFund/ResellerPayment/CustomerPayment)
+$paymentTypeId   = $_GET["paymenttypeid"]; //payment type id
+$transId         = $_GET["transid"]; //This refers to a unique transaction ID which we generate for each transaction
+$userId          = $_GET["userid"]; //userid of the user who is trying to make the payment
+$userType        = $_GET["usertype"]; //This refers to the type of user perofrming this transaction. The possible values are "Customer" or "Reseller"
+$transactionType = $_GET["transactiontype"]; //Type of transaction (ResellerAddFund/CustomerAddFund/ResellerPayment/CustomerPayment)
 
-$invoiceIds   = $_GET["invoiceids"];//comma separated Invoice Ids, This will have a value only if the transactiontype is "ResellerPayment" or "CustomerPayment"
-$debitNoteIds = $_GET["debitnoteids"];//comma separated DebitNotes Ids, This will have a value only if the transactiontype is "ResellerPayment" or "CustomerPayment"
+$invoiceIds   = $_GET["invoiceids"]; //comma separated Invoice Ids, This will have a value only if the transactiontype is "ResellerPayment" or "CustomerPayment"
+$debitNoteIds = $_GET["debitnoteids"]; //comma separated DebitNotes Ids, This will have a value only if the transactiontype is "ResellerPayment" or "CustomerPayment"
 
 $description = $_GET["description"];
 
-$sellingCurrencyAmount    = $_GET["sellingcurrencyamount"];//This refers to the amount of transaction in your Selling Currency
-$accountingCurrencyAmount = $_GET["accountingcurrencyamount"];//This refers to the amount of transaction in your Accounting Currency
+$sellingCurrencyAmount    = $_GET["sellingcurrencyamount"]; //This refers to the amount of transaction in your Selling Currency
+$accountingCurrencyAmount = $_GET["accountingcurrencyamount"]; //This refers to the amount of transaction in your Accounting Currency
 
-$redirectUrl = $_GET["redirecturl"];//This is the URL on our server, to which you need to send the user once you have finished charging him
+$redirectUrl = $_GET["redirecturl"]; //This is the URL on our server, to which you need to send the user once you have finished charging him
 
-$checksum = $_GET["checksum"];//checksum for validation
+$checksum = $_GET["checksum"]; //checksum for validation
 
 //Other variables.
 
@@ -154,7 +154,8 @@ if (verifyChecksum($paymentTypeId, $transId, $userId, $userType, $transactionTyp
 		}
 	} else {
 		die("Could not connect to mysql");
-	} // replace the DB parameters with yours*/
+	} // replace the DB parameters with yours
+	*/
 ?>
 <script type="text/javascript" src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
 <script>
@@ -173,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			customer_firstname: "<?php $name = $_GET['name']; echo $name;?>",
 			customer_phone: "<?php $telNo = $_GET['telNo']; echo $telNo;?>",
 			txref: "<?php $transId = $_GET['transid']; echo $transId;?>",
-			//integrity_hash: "<?php require 'integrityhash.php';?>", // commented out due to error
+			//integrity_hash: "<?php include 'integrityhash.php';?>", // commented out due to error
 			onclose: function closeCurrentWindow() {
 				window.close();
 			},
@@ -196,14 +197,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	<?php
 
 } else {
-	/**This message will be dispayed in any of the following case
-	 *
-	 * 1. You are not using a valid 32 bit secure key from your Reseller Control panel
-	 * 2. The data passed from foundation has been tampered.
+    /** 
+    * This message will be dispayed in any of the following case
+    *
+	* 1. You are not using a valid 32 bit secure key from your Reseller Control panel
+	* 2. The data passed from foundation has been tampered.
 	 *
 	 * In both these cases the customer has to be shown error message and shound not
 	 * be allowed to proceed  and do the payment.
-	 *
 	 **/
 
 	echo "Checksum mismatch !<br>";

@@ -1,4 +1,16 @@
 <?php
+/**
+ * For Payments
+ * 
+ * PHP version 7
+ * 
+ * @category Payment
+ * @package  Memcachier
+ * @author   Alexander Asomba <alex@asomba.com>
+ * @license  MIT License
+ * @link     http://alexasomba.com
+ */
+
 
 ini_set('session.save_handler', 'memcached');
 ini_set('session.save_path', getenv('MEMCACHIER_SERVERS'));
@@ -29,20 +41,20 @@ require "functions.php";
 
 <?php
 
-$key = getenv('SECURE-RESELLER-PAYMENT-KEY');//replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
+$key = getenv('SECURE-RESELLER-PAYMENT-KEY'); //replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
 
-$redirectUrl              = $_SESSION['redirecturl'];// redirectUrl received from foundation
-$transId                  = $_SESSION['transid'];//Pass the same transid which was passsed to your Gateway URL at the beginning of the transaction.
+$redirectUrl              = $_SESSION['redirecturl']; // redirectUrl received from foundation
+$transId                  = $_SESSION['transid']; //Pass the same transid which was passsed to your Gateway URL at the beginning of the transaction.
 $sellingCurrencyAmount    = $_SESSION['sellingcurrencyamount'];
 $accountingCurrencyAmount = $_SESSION['accountingcurencyamount'];
 
-$status = $_REQUEST["status"];// Transaction status received from your Payment Gateway
+$status = $_REQUEST["status"]; // Transaction status received from your Payment Gateway
 //This can be either 'Y' or 'N'. A 'Y' signifies that the Transaction went through SUCCESSFULLY and that the amount has been collected.
 //An 'N' on the other hand, signifies that the Transaction FAILED.
 
-/** HERE YOU HAVE TO VERIFY THAT THE STATUS PASSED FROM YOUR PAYMENT GATEWAY IS VALID.
+/** 
+ * HERE YOU HAVE TO VERIFY THAT THE STATUS PASSED FROM YOUR PAYMENT GATEWAY IS VALID.
  * And it has not been tampered with. The data has not been changed since it can * easily be done with HTTP request.
- *
  **/
 
 
