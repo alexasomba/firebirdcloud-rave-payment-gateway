@@ -15,7 +15,6 @@
         "hosting"
     ],
     "website": "https://reseller.firebirdcloud.com/",
-    "image": "heroku/php",
     "env": {
         "COUNTRY": {
           "description": "route country. Defaults to NG",
@@ -46,6 +45,7 @@
           "value": "Gfsuy805soA5dxLYH7WoInYhmi40w1V3"
         }
     },
+    "image": "heroku/php",
     "addons": [
       "papertrail",
       "memcachier"
