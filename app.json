@@ -15,6 +15,15 @@
       "hosting"
   ],
   "website": "https://reseller.firebirdcloud.com/",
+  "addons": [
+    "papertrail",
+    "memcachier"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ],
   "env": {
     "COUNTRY": {
       "description": "route country. Defaults to NG",
