@@ -1,29 +1,20 @@
 {
   "name": "Rave payment gateway integration for FirebirdCloud reseller",
   "description": "Receive Flutterwave Rave payments for your FirebirdCloud Domain and Hosting reseller business",
+  "keywords": [
+    "firebirdcloud",
+    "rave",
+    "nigeria",
+    "payment-gateway",
+    "flutterwave",
+    "heroku",
+    "alexasomba",
+    "reseller",
+    "hosting"
+],
+  "website": "https://reseller.firebirdcloud.com/",
   "repository": "https://github.com/alexasomba/firebirdcloud-rave-payment-gateway",
   "logo": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png",
-  "keywords": [
-      "firebirdcloud",
-      "rave",
-      "nigeria",
-      "payment-gateway",
-      "flutterwave",
-      "heroku",
-      "alexasomba",
-      "reseller",
-      "hosting"
-  ],
-  "website": "https://reseller.firebirdcloud.com/",
-  "addons": [
-    "papertrail",
-    "memcachier"
-  ],
-  "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-php"
-    }
-  ],
   "env": {
     "COUNTRY": {
       "description": "route country. Defaults to NG",
@@ -53,5 +44,10 @@
       "description": "Get your secure key from your Reseller Control panel. You need to replace this value in both the files with the KEY we generated for you at the time of adding the Gateway. You can check it from the Settings -> Finance and Billing -> Payment Gateway -> List / Add section by clicking the Payment Gateway that you added. Login here: https:\/\/manage.firebirdcloud.com\/reseller",
       "value": "Gfsuy805soA5dxLYH7WoInYhmi40w1V3"
     }
-  }
+  },
+  "image": "heroku/php",
+  "addons": [
+    "papertrail",
+    "memcachier"
+  ]
 }
