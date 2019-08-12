@@ -15,10 +15,6 @@
       "hosting"
   ],
   "website": "https://reseller.firebirdcloud.com/",
-  "addons": [
-    "papertrail",
-    "memcachier"
-  ],
   "env": {
     "COUNTRY": {
       "description": "route country. Defaults to NG",
