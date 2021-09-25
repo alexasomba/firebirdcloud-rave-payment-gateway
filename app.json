@@ -47,7 +47,8 @@
     },
     "image": "heroku/php",
     "addons": [
-      "papertrail",
-      "memcachier"
+      "papertrail:choklad",
+      "memcachier:dev",
+      "scheduler:standard"
     ]
 }
