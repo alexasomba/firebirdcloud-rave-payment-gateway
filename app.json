@@ -1,6 +1,6 @@
 {
-  "name": "Rave payment gateway integration for FirebirdCloud reseller",
-  "description": "Receive Flutterwave Rave payments for your FirebirdCloud Domain and Hosting reseller business",
+  "name": "Flutterwave payment gateway integration for FirebirdCloud reseller",
+  "description": "Receive Flutterwave payments for your FirebirdCloud Domain and Hosting reseller business",
   "repository": "https://github.com/alexasomba/firebirdcloud-rave-payment-gateway",
   "logo": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png",
   "keywords": [
@@ -25,7 +25,7 @@
           "value": "NGN"
         },
       "CUSTOM-LOGO-URL": {
-          "description": "Link to the Logo image.",
+          "description": "Link to your Logo image.",
           "value": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png"
         },
       "CUSTOM-MODAL-DESCRIPTION": {
@@ -37,12 +37,12 @@
           "value": "My Hosting Service"
         },
       "RAVE-PUBLIC-KEY": {
-          "description": "Your Rave merchant public key, see how to get Your Rave merchant public key, see how to get your API key here: https:\/\/developer.flutterwave.com\/docs\/api-keys",
-          "value": "FLWPUBK-6r5hg9c3dd3769e6tr43e2b003118625-X"
+          "description": "Your Flutterwave merchant public key, see how to get Your Rave merchant public key, see how to get your API key here: https:\/\/developer.flutterwave.com\/docs\/api-keys",
+          "value": "FLWPUBK-xxxxxxxxxxxxxxxxxxxxxxxx-X"
         },
       "SECURE-RESELLER-PAYMENT-KEY": {
         "description": "Get your secure key from your Reseller Control panel. You need to replace this value in both the files with the KEY we generated for you at the time of adding the Gateway. You can check it from the Settings -> Finance and Billing -> Payment Gateway -> List / Add section by clicking the Payment Gateway that you added. Login here: https:\/\/manage.firebirdcloud.com\/reseller",
-        "value": "Gfsuy805soA5dxLYH7WoInYhmi40w1V3"
+        "value": "Gxxxxxxxxxxxxxxxxxxxxxxxxxx3"
       }
   },
   "image": "heroku/php",
