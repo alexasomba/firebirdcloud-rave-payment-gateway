@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce55676c0553013a212ad488fbeb481f",
+    "content-hash": "4bbd5cde04f91d84fc0a2a10f0187e23",
     "packages": [
         {
             "name": "memcachier/php-memcache-sasl",
@@ -53,6 +53,10 @@
                 "memcache",
                 "sasl"
             ],
+            "support": {
+                "issues": "https://github.com/memcachier/PHPMemcacheSASL/issues",
+                "source": "https://github.com/memcachier/PHPMemcacheSASL/tree/master"
+            },
             "time": "2015-06-04T19:44:27+00:00"
         }
     ],
@@ -66,5 +70,6 @@
         "php": "^7.4.0",
         "ext-memcached": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }

@@ -1,54 +1,54 @@
 {
-    "name": "Rave payment gateway integration for FirebirdCloud reseller",
-    "description": "Receive Flutterwave Rave payments for your FirebirdCloud Domain and Hosting reseller business",
-    "repository": "https://github.com/alexasomba/firebirdcloud-rave-payment-gateway",
-    "logo": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png",
-    "keywords": [
-        "firebirdcloud",
-        "rave",
-        "nigeria",
-        "payment-gateway",
-        "flutterwave",
-        "heroku",
-        "alexasomba",
-        "reseller",
-        "hosting"
-    ],
-    "website": "https://reseller.firebirdcloud.com/",
-    "env": {
-        "COUNTRY": {
-          "description": "route country. Defaults to NG",
-          "value": "NG"
+  "name": "Flutterwave payment gateway integration for FirebirdCloud reseller",
+  "description": "Receive Flutterwave payments for your FirebirdCloud Domain and Hosting reseller business",
+  "repository": "https://github.com/alexasomba/firebirdcloud-rave-payment-gateway",
+  "logo": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png",
+  "keywords": [
+      "firebirdcloud",
+      "rave",
+      "nigeria",
+      "payment-gateway",
+      "flutterwave",
+      "heroku",
+      "alexasomba",
+      "reseller",
+      "hosting"
+  ],
+  "website": "https://reseller.firebirdcloud.com/",
+  "env": {
+      "COUNTRY": {
+        "description": "route country. Defaults to NG",
+        "value": "NG"
+      },
+      "CURRENCY": {
+          "description": "currency to charge in. Defaults to NGN",
+          "value": "NGN"
         },
-        "CURRENCY": {
-            "description": "currency to charge in. Defaults to NGN",
-            "value": "NGN"
-          },
-        "CUSTOM-LOGO-URL": {
-            "description": "Link to the Logo image.",
-            "value": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png"
-          },
-        "CUSTOM-MODAL-DESCRIPTION": {
-            "description": "Text to be displayed as a short modal description. ex. SECURE PAYMENT",
-            "value": "SECURE PAYMENT"
-          },
-        "CUSTOM-MODAL-TITLE": {
-            "description": "Text to be displayed as the title of the payment modal. ex. My Business Name",
-            "value": "My Hosting Service"
-          },
-        "RAVE-PUBLIC-KEY": {
-            "description": "Your Rave merchant public key, see how to get Your Rave merchant public key, see how to get your API key here: https:\/\/developer.flutterwave.com\/docs\/api-keys",
-            "value": "FLWPUBK-6r5hg9c3dd3769e6tr43e2b003118625-X"
-          },
-        "SECURE-RESELLER-PAYMENT-KEY": {
-          "description": "Get your secure key from your Reseller Control panel. You need to replace this value in both the files with the KEY we generated for you at the time of adding the Gateway. You can check it from the Settings -> Finance and Billing -> Payment Gateway -> List / Add section by clicking the Payment Gateway that you added. Login here: https:\/\/manage.firebirdcloud.com\/reseller",
-          "value": "Gfsuy805soA5dxLYH7WoInYhmi40w1V3"
-        }
-    },
-    "image": "heroku/php",
-    "addons": [
-      "papertrail:choklad",
-      "memcachier:dev",
-      "scheduler:standard"
-    ]
+      "CUSTOM-LOGO-URL": {
+          "description": "Link to your Logo image.",
+          "value": "https://firebirdcloud.automaticpallet.xyz/wp-content/uploads/sites/7/2019/01/firebirdcloud_logo.png"
+        },
+      "CUSTOM-MODAL-DESCRIPTION": {
+          "description": "Text to be displayed as a short modal description. ex. SECURE PAYMENT",
+          "value": "SECURE PAYMENT"
+        },
+      "CUSTOM-MODAL-TITLE": {
+          "description": "Text to be displayed as the title of the payment modal. ex. My Business Name",
+          "value": "My Hosting Service"
+        },
+      "RAVE-PUBLIC-KEY": {
+          "description": "Your Flutterwave merchant public key, see how to get Your Rave merchant public key, see how to get your API key here: https:\/\/developer.flutterwave.com\/docs\/api-keys",
+          "value": "FLWPUBK-xxxxxxxxxxxxxxxxxxxxxxxx-X"
+        },
+      "SECURE-RESELLER-PAYMENT-KEY": {
+        "description": "Get your secure key from your Reseller Control panel. You need to replace this value in both the files with the KEY we generated for you at the time of adding the Gateway. You can check it from the Settings -> Finance and Billing -> Payment Gateway -> List / Add section by clicking the Payment Gateway that you added. Login here: https:\/\/manage.firebirdcloud.com\/reseller",
+        "value": "Gxxxxxxxxxxxxxxxxxxxxxxxxxx3"
+      }
+  },
+  "image": "heroku/php",
+  "addons": [
+    "papertrail:choklad",
+    "memcachier:dev",
+    "scheduler:standard"
+  ]
 }
