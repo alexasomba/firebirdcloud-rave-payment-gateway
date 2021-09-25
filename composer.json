@@ -1,20 +1,21 @@
 {
   "name": "memcachier/php-memcache-example",
   "type": "library",
-  "description": "An example PHP app that uses MemCachier to cache prime number computations",
+  "description": "An PHP app that uses MemCachier to cache GET parameters",
   "keywords": ["memcachier", "memcache", "cache", "sasl", "binary"],
   "homepage": "https://github.com/memcachier/examples-php",
   "license": "BSD",
   "authors": [
     {
-      "name": "MemCachier Inc",
-      "email": "code@memcachier.com",
-      "homepage": "https://www.memcachier.com/"
+      "name": "Alexander Asomba",
+      "email": "alex@asomba.com",
+      "homepage": "https://alexasomba.com/"
     }
   ],
   "require": {
     "php": "^7.4.0",
     "memcachier/php-memcache-sasl": ">=1.0.1",
+"peppeocchi/php-cron-scheduler": "4.*",
     "ext-memcached": "*"
   }
 }
