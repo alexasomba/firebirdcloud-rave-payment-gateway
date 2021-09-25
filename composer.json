@@ -15,7 +15,7 @@
   "require": {
     "php": "^7.4.0",
     "memcachier/php-memcache-sasl": ">=1.0.1",
-"peppeocchi/php-cron-scheduler": "4.*",
+    "peppeocchi/php-cron-scheduler": "4.*",
     "ext-memcached": "*"
   }
 }
