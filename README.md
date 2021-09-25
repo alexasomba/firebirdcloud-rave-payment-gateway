@@ -1,6 +1,6 @@
 # Flutterwave Rave FirebirdCloud Domain and Hosting Reseller PHP Payment Integration Kit
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alexasomba/firebirdcloud-rave-payment-gateway)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alexasomba/firebirdcloud-rave-payment-gateway/tree/heroku)
 
 Get your domain and web hosting reseller business started instantly at no cost and accept payment using this Flutterwave Rave PHP payment gateway integration kit. Become the "Domain name, Web Hosting and Email Hosting Reseller" with Nigeria's leading white label domain and web hosting reseller platform FireBirdCloud.
 

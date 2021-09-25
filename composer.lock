@@ -63,7 +63,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.2.0",
+        "php": "^7.4.0",
         "ext-memcached": "*"
     },
     "platform-dev": []
